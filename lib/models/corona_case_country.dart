@@ -1,5 +1,5 @@
-import 'package:CoronaTracker/models/corona_case.dart';
-import 'package:CoronaTracker/models/corona_case_total_count.dart';
+import '.././models/corona_case.dart';
+import '.././models/corona_case_total_count.dart';
 
 class CoronaCaseCountry {
   final String country;

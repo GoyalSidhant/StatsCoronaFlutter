@@ -1,4 +1,4 @@
-import 'package:CoronaTracker/utils/utils.dart';
+import '.././utils/utils.dart';
 
 class CoronaTotalCount {
   final int confirmed;

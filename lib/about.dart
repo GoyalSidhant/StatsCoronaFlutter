@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:CoronaTracker/advices.dart';
-import 'package:CoronaTracker/models/about.dart';
+import './advices.dart';
+import './models/about.dart';
 
 class AboutPage extends StatelessWidget {
   final About about = About.defaultAbout;

@@ -1,3 +1,4 @@
+import 'package:CoronaTracker/india.dart';
 import 'package:flutter/material.dart';
 import 'package:CoronaTracker/about.dart';
 import 'package:CoronaTracker/advices.dart';
@@ -14,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Corona Virus Tracker',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.orange,
+        brightness: Brightness.dark
+
       ),
       home: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           appBar: AppBar(
             title: Text('Corona Virus Tracker'),
@@ -26,6 +29,9 @@ class MyApp extends StatelessWidget {
                 Tab(
                   text: "Stats",
                 ),
+                Tab(
+                  text: "India",
+                  ),
                 Tab(
                   text: "Maps",
                 ),
@@ -37,14 +43,17 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
+            
           ),
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               StatsPage(),
+              India(),
               BaseGoogleMap().getWidget(),
               AdvicesPage(),
-              AboutPage()
+              AboutPage(),
+
             ],
           ),
         ),

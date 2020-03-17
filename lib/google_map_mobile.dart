@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:CoronaTracker/apis/corona_service.dart';
-import 'package:CoronaTracker/models/corona_case_country.dart';
+import './apis/corona_service.dart';
+import './models/corona_case_country.dart';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'google_map_base.dart';
@@ -94,8 +94,8 @@ class _MapsPage extends State<MobileMapsPage>
             return GoogleMap(
               onMapCreated: _onMapCreated,
               initialCameraPosition: CameraPosition(
-                target: const LatLng(30.5833, 114.26667),
-                zoom: 5,
+                target: const LatLng(20.5937, 78.9629),
+                zoom: 4,
               ),
               markers: _markers.values.toSet(),
             );

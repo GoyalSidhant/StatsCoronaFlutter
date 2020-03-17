@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:CoronaTracker/apis/corona_service.dart';
-import 'package:CoronaTracker/models/corona_case_country.dart';
-import 'package:CoronaTracker/models/corona_case_total_count.dart';
-import 'package:CoronaTracker/utils/utils.dart';
+import './apis/corona_service.dart';
+import './models/corona_case_country.dart';
+import './models/corona_case_total_count.dart';
+import './utils/utils.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class StatsPage extends StatefulWidget {
@@ -260,7 +260,7 @@ class _StatsPage extends State<StatsPage>
           var children = List<Widget>();
 
           final chinaCase = cases.firstWhere(
-              (element) => element.country.toLowerCase().contains('china'));
+              (element) => element.country.toLowerCase().contains('india'));
 
           if (chinaCase != null) {
             final data = [
@@ -274,7 +274,7 @@ class _StatsPage extends State<StatsPage>
 
             final seriesList = [
               charts.Series<OrdinalCases, String>(
-                id: 'China Cases',
+                id: 'India Cases',
                 domainFn: (OrdinalCases cases, _) => cases.country,
                 measureFn: (OrdinalCases cases, _) => cases.total,
                 data: data,
@@ -299,7 +299,7 @@ class _StatsPage extends State<StatsPage>
                 padding: EdgeInsets.only(top: 8),
               ),
               Text(
-                "Cases in Mainland China",
+                "Cases in India",
                 style: Theme.of(context).textTheme.headline,
               ),
               Container(
@@ -319,7 +319,7 @@ class _StatsPage extends State<StatsPage>
           }
 
           cases.removeWhere(
-              (element) => element.country.toLowerCase().contains('china'));
+              (element) => element.country.toLowerCase().contains('india'));
 
           var confirmedCasesData = List<OrdinalCases>();
           var deathsCasesData = List<OrdinalCases>();
@@ -398,7 +398,7 @@ class _StatsPage extends State<StatsPage>
               padding: EdgeInsets.only(top: 16),
             ),
             Text(
-              "Cases outside Mainland China",
+              "Cases outside India",
               style: Theme.of(context).textTheme.headline,
             ),
             Container(

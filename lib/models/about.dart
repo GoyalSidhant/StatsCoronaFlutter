@@ -7,7 +7,7 @@ class About {
   static About get defaultAbout {
     return About(
         title:
-            "Made by ❤️. GitHub: alfianlosari\n\nWebsite:\nhttps://alfianlosari.com | Xcoding With Alfian\n\n©2020 Alfian Losari. All Rights Reserved",
+            "Made by ❤️ Sidhant Goyal. All Rights Reserved",
         copyrights: [
           Copyright(title: "Statistic & Map Copyright", license: '''
 ArcGIS Corona Virus Datasets.
