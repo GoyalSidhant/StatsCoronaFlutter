@@ -65,10 +65,7 @@ Widget listViewWidget(List<Regional> regional) {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text("widget.title"),
-      ),
+      backgroundColor: Colors.black38,
       body: FutureBuilder(
           future: getData(),
           builder: (context, snapshot) {
